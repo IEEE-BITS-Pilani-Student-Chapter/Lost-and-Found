@@ -14,11 +14,9 @@ class UserDetailsView(APIView):
         userData = request.data
         newUser = User.objects.create(
         name = userData["name"],
-        phoneNumber = userData["phoneNumber"],
         email = userData["email"],
         status = True    
         )
         newUser.save()
         serializer = UserSerializer(newUser)
         return JsonResponse(serializer.data)
-        
