@@ -9,7 +9,15 @@
     /* position: fixed; */
 }
 
+.navbar > *{
+    margin: auto 0;
+}
+
 /* logo */
+.logo{
+    height: 100%;
+}
+
 .logo img{
     height: 100%;
 }
@@ -19,28 +27,61 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 40%;
+    width: 30%;
     align-items: center;
 }
 
 /* links */
-.nav-links{
+/* .nav-link{
     text-decoration: none;
     color: black;
     margin: auto 0;
-}
+} */
 
-.link-div{
+.link-div, .active-link{
     padding: 0.5rem 1rem;
     border-radius: 5px;
 }
 
-.link-div:hover{
-    background-color: #c8c8c833;
+.link-div{
+    color: orange;
 }
 
-/* svg icons - search, user */
+.link-div:hover{
+    background-color: #c8c8c833;
+    cursor: pointer;
+}
+
+/* applies when link is active */
+.active-link{
+    background-color: orange;
+    color: white;
+}
+
+/* search bar */
+.search{
+    margin: auto 0;
+}
+
+.search_bar{
+    width: 90%;
+    border: none;
+    border-radius: 100px;
+    padding: 1rem;
+}
+
+.search_bar:focus-within{
+    border: none;
+}
+
+/* icons - search, user */
 .navbar .icon{
     /* height: 40%; */
     margin: auto;
+}
+
+/* signup btn */
+#signup{
+    background-color: orange;
+    color: white;
 }
