@@ -1,7 +1,46 @@
+/* navbar main div */
 .navbar{
     display: flex;
-    justify-content: space-around;
-    position: fixed;
+    flex-direction: row;
+    height: 10vh;
     width: 100vw;
-    padding: 1rem;
+    border: 2px solid black;
+    justify-content: space-around;
+    /* position: fixed; */
+}
+
+/* logo */
+.logo img{
+    height: 100%;
+}
+
+/* switch options - cat, lost, found */
+.nav-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%;
+    align-items: center;
+}
+
+/* links */
+.nav-links{
+    text-decoration: none;
+    color: black;
+    margin: auto 0;
+}
+
+.link-div{
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.link-div:hover{
+    background-color: #c8c8c833;
+}
+
+/* svg icons - search, user */
+.navbar .icon{
+    /* height: 40%; */
+    margin: auto;
 }
