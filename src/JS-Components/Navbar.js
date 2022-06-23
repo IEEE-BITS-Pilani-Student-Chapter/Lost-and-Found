@@ -17,9 +17,9 @@ function Navbar() {
 
         {/* switch b/w pages */}
         <div className="nav-items">
-          <NavLink className={({isActive}) => isActive ? 'active-link' : 'link-div'} to="/categories">Categories</NavLink>
-          <NavLink className={({isActive}) => isActive ? 'active-link' : 'link-div'} to="/lost">Lost</NavLink>
-          <NavLink className={({isActive}) => isActive ? 'active-link' : 'link-div'} to="/found">Found</NavLink>
+          <NavLink className={({isActive}) => isActive ? 'active-link' : 'link-div'} to="categories">Categories</NavLink>
+          <NavLink className={({isActive}) => isActive ? 'active-link' : 'link-div'} to="lost">Lost</NavLink>
+          <NavLink className={({isActive}) => isActive ? 'active-link' : 'link-div'} to="found">Found</NavLink>
         </div>
 
         {/* search bar */}
@@ -29,7 +29,7 @@ function Navbar() {
         </div>
 
         {/* rightmost div - USER */}
-        <Link className="link-div" id="signup" to='/signUp'>SIGN UP</Link>
+        <Link className="link-div" id="signup" to='signup' todo ="SIGN UP">SIGN UP</Link>
       </div>
   );
 }

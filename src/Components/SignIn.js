@@ -11,7 +11,7 @@ function SignIn(props) {
           <span className={props.todo === "SIGN IN" ? "inactive-option" : ""}>
             <Link
               className={props.todo === "SIGN IN" ? "inactive-option-link" : ""}
-              to="/"
+              to="signin"
             >
               SIGN IN
             </Link>
@@ -19,7 +19,7 @@ function SignIn(props) {
           <span className={props.todo === "SIGN UP" ? "inactive-option" : ""}>
             <Link
               className={props.todo === "SIGN UP" ? "inactive-option-link" : ""}
-              to="/signup"
+              to="signup"
             >
               SIGN UP
             </Link>
