@@ -5,6 +5,7 @@ import Main from "./Main";
 import LNF from "./JS-Components/LNF";
 import Categories from "./JS-Components/Categories";
 import Home from "./JS-Components/Home";
+import Developers from "./JS-Components/Developers";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
 
         {/* navigate to found form */}
         <Route exact path="found" element={<LNF l_or_f="f" />}></Route>
+
+        {/* navigate to developers' page */}
+        <Route exact path="developers" element={<Developers />}></Route>
 
         <Route exact path="signin" element={<SignUp todo="SIGN IN" />} />
         <Route exact path="signup" element={<SignUp todo="SIGN UP" />} />

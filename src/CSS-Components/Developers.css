@@ -1,0 +1,17 @@
+/* heading */
+.dev_head{
+    width: 100vw;
+    height: 10vh;
+    text-align: center;
+    font-size: 6vh;
+    padding: 2vh;
+}
+
+.dev_cards{
+    width: 100vw;
+    height: 80vh;       
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}

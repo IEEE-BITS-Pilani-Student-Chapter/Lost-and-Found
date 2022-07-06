@@ -1,0 +1,41 @@
+.dev_card{
+    border: 5px solid #f0efec4d;
+    width: 20%;
+    height: 60%;
+    padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffb52770;
+    border-radius: 20px;
+}
+
+/* image */
+.dev_img{
+    width: 50%;
+    border-radius: 50%;
+}
+
+/* name */
+.dev_name{
+    color: white;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+/* department/role */
+.dev_dept{
+    color: gray;
+    font-size: 0.9rem;
+}
+
+
+/* social media handle */
+.dev_accounts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+}
