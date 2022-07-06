@@ -25,7 +25,6 @@ class UserDetailsView(APIView):
                 status=status.HTTP_401_UNAUTHORIZED)
 
         user = self.getUserObject(email)
-        print(user.userType)
         serializer = UserSerializer(user)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
@@ -122,12 +121,12 @@ class ItemDetailsView(APIView):
         except User.DoesNotExist:
             raise Http404
     
-    def get(self, request, itemId, format=None):
-        item = Item.objects.get(id=itemId)
+    def get(self, request, id, format=None):
+        item = Item.objects.get(id=id)
         serializer = ItemSerializer(item)
         return JsonResponse(serializer.data)
     
-    def patch(self,request,itemId,format=None):
+    def patch(self,request,id,format=None):
         try:
             email = getToken(request)
         except Exception:
@@ -135,8 +134,8 @@ class ItemDetailsView(APIView):
                 {"message": "invalid token provided."},
                 status=status.HTTP_401_UNAUTHORIZED)
         user = self.getUserObject(email)
-        item = Item.objects.get(id=itemId)
-        if item.user is user:
+        item = Item.objects.get(id=id)
+        if item.user == user:
             data = request.data
             item.itemName = data.get("itemName",item.itemName)
             item.hostel = data.get("hostel",item.hostel)
@@ -153,7 +152,7 @@ class ItemDetailsView(APIView):
                 status=status.HTTP_401_UNAUTHORIZED)
 
 
-    def delete(self,request,itemId,format=None):
+    def delete(self,request,id,format=None):
         try:
             email = getToken(request)
         except Exception:
@@ -161,8 +160,8 @@ class ItemDetailsView(APIView):
                 {"message": "invalid token provided."},
                 status=status.HTTP_401_UNAUTHORIZED)
         user = self.getUserObject(email)
-        item = Item.objects.get(id=itemId)
-        if item.user is user:
+        item = Item.objects.get(id=id)
+        if item.user == user:
             data = request.data
             item.status = False
             item.save()

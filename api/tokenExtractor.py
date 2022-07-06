@@ -19,7 +19,7 @@ def getToken(request):
     pad = len(codedString)%4
     codedString = codedString + "="*pad
     data = json.loads(base64.b64decode(codedString).decode("utf-8"))
-    email = data['firebase']['identities']['email'][0]
+    email = data['email']
 
 
 
