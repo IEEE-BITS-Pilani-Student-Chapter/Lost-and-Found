@@ -9,12 +9,12 @@ function GoogleAuth() {
   function manageResponse(res) {
     // 'res' is response sent by google, we use jwt_decode to decode its credentials into data we want, and then use its properties like email (to verify bits login) or user's picture to be displayed
 
+    // so basically res.credential is the id token and data is its simplified version
     let data = jwt_decode(res.credential);
 
     // checking the regex for email
     if (check.test(data.email)) {
       move("/", { replace: true });
-      console.log(data);
     }
   }
 
