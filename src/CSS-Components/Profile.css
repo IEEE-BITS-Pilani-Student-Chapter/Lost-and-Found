@@ -1,0 +1,42 @@
+.user-profile {
+  display: flex;
+  padding: 1rem 5rem;
+  margin: 61px 0 0 110px;
+  height: 80vh;
+  width: 100%;
+}
+
+.user-image {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  padding: 100px;
+}
+
+.user-img {
+  width: 100%;
+  height: 100%;
+  /* border: 3px solid black; */
+  border-radius: 100%;
+}
+
+.user-image svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  fill: none;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.orange{
+    stroke: #FFA500;
+    transform: rotate(180deg);
+}
+
+.black{
+    padding: 40px;
+    stroke: black;
+}

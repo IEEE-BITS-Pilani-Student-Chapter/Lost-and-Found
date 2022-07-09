@@ -1,24 +1,13 @@
 import React from "react";
 import "../CSS-Components/Navbar.css";
-import { useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import logo from "../Assets/logo.png";
 import { NavLink, Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className="navbar">
-      {/* temporary logo - TO BE CHANGED */}
-      {/* leftmost div - containing logo only */}
-      <div className="logo">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShV-TuqQlHIuTrTnsPbti-zjZ2oh0TDAEN8Q&usqp=CAU"
-          alt=""
-        />
-      </div>
-
-      {/* switch b/w pages */}
-      <div className="nav-items">
+    <div className="nav-bar">
+      <img className="nav-logo" src={logo} alt="LNF" />
+      <div className="nav-links">
         <NavLink
           className={({ isActive }) => (isActive ? "active-link" : "link-div")}
           to="categories"
@@ -39,11 +28,10 @@ function Navbar() {
         </NavLink>
       </div>
 
-      {/* search bar */}
-      <div className="search" id="search">
-        <input type="text" className="search_bar" />
-        <FontAwesomeIcon className="icon" icon={faSearch} />
-      </div>
+      <form className="nav-search">
+        <input type="text" className="nav-search-input" placeholder=" " />
+        <button type="reset" className="nav-search-btn"></button>
+      </form>
 
       {/* rightmost div - USER */}
       <Link className="link-div" id="signup" to="signup" todo="SIGN UP">

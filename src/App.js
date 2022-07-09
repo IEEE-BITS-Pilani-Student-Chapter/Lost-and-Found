@@ -6,6 +6,7 @@ import LNF from "./JS-Components/LNF";
 import Categories from "./JS-Components/Categories";
 import Home from "./JS-Components/Home";
 import Developers from "./JS-Components/Developers";
+import Profile from "./JS-Components/Profile";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
 
         {/* navigate to developers' page */}
         <Route exact path="developers" element={<Developers />}></Route>
+
+        {/* navigate to profile page */}
+        <Route exact path="profile" element={<Profile />}></Route>
 
         <Route exact path="signin" element={<SignUp todo="SIGN IN" />} />
         <Route exact path="signup" element={<SignUp todo="SIGN UP" />} />
