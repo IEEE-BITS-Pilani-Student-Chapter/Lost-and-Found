@@ -1,3 +1,102 @@
-.lnf-form-div {
-  margin: 2%;
+.lnf{
+  background: url('https://cdn.pixabay.com/photo/2017/03/25/17/56/color-2174051_960_720.png') no-repeat;
+  background-size: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.lnf-form {
+  width: 30%;
+  height: 70vh;
+  margin: auto;
+  border: 2px solid orange;
+  padding: 2% 5%;
+  background-color: white;
+}
+
+.lnf-form > form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.lnf-form-div{
+  width: 100%;
+  position: relative;
+  background-color: white;
+}
+
+.lnf-form-div > input{
+  width: 100%;
+  background-color: white;
+}
+
+.lnf-form-div > input:focus-within{
+  border-color: orange;
+}
+
+label{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* upload img */
+.upload{
+  margin-top: 10px;
+}
+
+.upload, .submit{
+  border: none;
+}
+
+.upload:focus-within, .submit:focus-within{
+  border: none;
+}
+
+/* sumbit btn */
+.submit{
+  color: white;
+  background-color: orange !important;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* animation when input is focused */
+input:focus + label{
+  transform: translateY(-100%);
+  transition: .3s ease-in-out;
+  font-size: 0.6rem;
+  color: orange;
+}
+
+/* hide sidebar from input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* side text */
+.lnf-text{
+  width: 40%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* position: fixed; */
+}
+
+.lnf-text > div {
+  font-size: 3rem;
+  color: white;
+  text-align: center;
 }
